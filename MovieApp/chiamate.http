@@ -1,0 +1,29 @@
+// lista titoli "terminator" 
+GET https://www.omdbapi.com/?apikey=d1b45642&t=terminator HTTP/1.1
+
+###
+
+// lista film harry potter
+GET https://www.omdbapi.com/?apikey=d1b45642&s=harry potter&type=movie HTTP/1.1
+
+###
+
+// lista titoli harry potter usciti nel 2000
+GET https://www.omdbapi.com/?apikey=d1b45642&s=harry potter&y=2000 HTTP/1.1
+
+###
+
+// lista serie harry potter
+GET https://www.omdbapi.com/?apikey=d1b45642&s=harry potter&type=series HTTP/1.1
+
+###
+
+// lista giochi harry potter
+GET https://www.omdbapi.com/?apikey=d1b45642&s=harry potter&type=game HTTP/1.1
+
+###
+
+// ricerca di "Harry Potter: Quidditch World Cup" per id
+GET https://www.omdbapi.com/?apikey=d1b45642&i=tt0388991 HTTP/1.1
+
+###
