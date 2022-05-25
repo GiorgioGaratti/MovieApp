@@ -4,9 +4,56 @@ export const apilist = (s, type) => {
     const url = BASE_URL + `s=${s}&type=${type}`;
     fetch(url).then((response) => response.json()).then((results) => {
         const items = results.Search;
-        console.log(items);
+        // qui chiamo viewItems
+        viewItems(items);
     });
 }
+
+// estrapola ogni elemento dell'array e stampa le proprietà
+const viewItems = (items) => {
+    // es6 introduce metodi + efficenti, esiste il metodo map, proprio egli array
+    // map cicla l'array e per ogni elemento chiama la funzione di callback con argomento ciascun elemento dell'array
+    
+    // 1.ciclare l'array
+    items.map((item) => {
+        // 2.estrapolare un item
+        // console.log(item);
+        // 3.estrapolare solo le proprietà che ci servono
+        //   le prop sono Title, Year, Poster e Type
+        console.group(item.Title);// qui inizia un gruppo di elementi
+        console.log(item.Year);
+        console.log(item.Type);
+        console.log(item.Poster);
+        console.groupEnd();// qui termina il gruppo meglio formattato
+    });
+}
+
+// quando passo una funzione come parametro non metto le parentesi tonde, solo quando la eseguo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* // usare la mia url e debuggare sul browser
 
