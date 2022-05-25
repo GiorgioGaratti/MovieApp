@@ -1,4 +1,14 @@
-// usare la mia url e debuggare sul browser
+import {BASE_URL} from "./config.js";
+
+export const apilist = (s, type) => {
+    const url = BASE_URL + `s=${s}&type=${type}`;
+    fetch(url).then((response) => response.json()).then((results) => {
+        const items = results.Search;
+        console.log(items);
+    });
+}
+
+/* // usare la mia url e debuggare sul browser
 
 const URL_LIST_HARRY_POTTER = "https://www.omdbapi.com/?apikey=d1b45642&s=harry%20potter";
 
@@ -19,4 +29,5 @@ export const listSeriesHarryPotter = () => {
         const series = results.Search;
         console.log(series);
     });
-}
+} */
+
