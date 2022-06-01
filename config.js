@@ -7,3 +7,7 @@ export const CONTENT_TYPE = {
     EPISODE: "episode",
     GAME: "game"
 };
+
+export const TAG = {
+    P: "p"
+};

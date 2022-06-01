@@ -1,5 +1,5 @@
 // lista titoli "terminator" 
-GET https://www.omdbapi.com/?apikey=d1b45642&t=terminator HTTP/1.1
+GET https://www.omdbapi.com/?apikey=d1b45642&t=Harry Potter and the Deathly Hallows: Part 2 HTTP/1.1
 
 ###
 
@@ -14,7 +14,7 @@ GET https://www.omdbapi.com/?apikey=d1b45642&s=harry potter&y=2000 HTTP/1.1
 ###
 
 // lista pirates of the carribean
-GET https://www.omdbapi.com/?apikey=d1b45642&s=Pirates of the Caribbean&type=series HTTP/1.1
+GET https://www.omdbapi.com/?apikey=d1b45642&s=Pirates of the Caribbean&type=movie HTTP/1.1
 
 ###
 

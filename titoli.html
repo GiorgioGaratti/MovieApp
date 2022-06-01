@@ -7,13 +7,14 @@
     <title>Titoli Movie</title>
 </head>
 <body>
-    <script>
+    <script type="module">
+
         import {apilist} from "./modulo-api.js";
         import {CONTENT_TYPE} from "./config.js";
 
         apilist("harry potter", CONTENT_TYPE.MOVIE);
-        apilist(" poharrytter", CONTENT_TYPE.MOVIE);
-        apilist("harry potter", CONTENT_TYPE.MOVIE);
+        apilist("the lord of the rings", CONTENT_TYPE.MOVIE);
+        apilist("Pirates of the Caribbean", CONTENT_TYPE.MOVIE);
 
     </script>
     <div id="div1">

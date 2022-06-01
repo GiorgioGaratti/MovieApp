@@ -1,4 +1,4 @@
-import {BASE_URL} from "./config.js";
+import {BASE_URL, TAG} from "./config.js";
 
 // chiama, usando la libreria fetch, le api passando il parametro ricerca e il tipo. Le API restituiscono oggetti json
 export const apilist = (s, type) => {
@@ -13,15 +13,20 @@ export const apilist = (s, type) => {
 }
 
 const viewItems = (items) => {
-    
+    const element = document.getElementById("div1");
     // 1.ciclare l'array
     items.map((item) => {
-        // 2.estrapolare un item
-        // console.log(item);
-        // 3.estrapolare solo le proprietà che ci servono
-        //   le prop sono Title, Year, Poster e Type
-
+        element.appendChild(createHTMLMovie(item));
         // qui ci sarà il createelement e il createnode
-       
     });
-}
+};
+
+const createHTMLMovie = (movie) => {
+    const para = document.createElement(TAG.P);
+
+    const node = document.createTextNode(movie.Title);
+
+    para.appendChild(node);
+
+    return para;
+};
