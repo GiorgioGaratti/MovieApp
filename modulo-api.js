@@ -19,9 +19,12 @@ console.log("Fine esecuzione...");
 
 import {BASE_URL} from "./config.js";
 
+// chiama, usando la libreria fetch, le api passando il parametro ricerca e il tipo. Le API restituiscono oggetti json
 export const apilist = (s, type) => {
     const url = BASE_URL + `s=${s}&type=${type}`;
-    fetch(url).then((response) => response.json()).then((results) => {
+    fetch(url)
+    .then((response) => response.json())
+    .then((results) => {
         const items = results.Search;
         // qui chiamo viewItems
         viewItems(items);
