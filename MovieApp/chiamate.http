@@ -3,8 +3,8 @@ GET https://www.omdbapi.com/?apikey=d1b45642&t=terminator HTTP/1.1
 
 ###
 
-// lista film harry potter
-GET https://www.omdbapi.com/?apikey=d1b45642&s=harry potter&type=movie HTTP/1.1
+// lista film harry potter con plot lunghi
+GET https://www.omdbapi.com/?apikey=d1b45642&s=harry potter&p=full HTTP/1.1
 
 ###
 
@@ -13,13 +13,18 @@ GET https://www.omdbapi.com/?apikey=d1b45642&s=harry potter&y=2000 HTTP/1.1
 
 ###
 
-// lista serie harry potter
+// lista pirates of the carribean
+GET https://www.omdbapi.com/?apikey=d1b45642&s=Pirates of the Caribbean&type=series HTTP/1.1
+
+###
+
+// lista harry potter
 GET https://www.omdbapi.com/?apikey=d1b45642&s=harry potter&type=series HTTP/1.1
 
 ###
 
-// lista giochi harry potter
-GET https://www.omdbapi.com/?apikey=d1b45642&s=harry potter&type=game HTTP/1.1
+// lista lord of the rings
+GET https://www.omdbapi.com/?apikey=d1b45642&s=lord of the rings&type=game HTTP/1.1
 
 ###
 

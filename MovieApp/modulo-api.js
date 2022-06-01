@@ -1,3 +1,22 @@
+/* 
+import {apilist} from "./modulo-api.js";
+import {CONTENT_TYPE} from "./config.js";
+
+console.log("Inizio esecuzione.");
+
+// apilist("harry potter","");
+
+apilist("harry potter", CONTENT_TYPE.MOVIE);
+
+apilist("harry potter","series");
+// filtro i film
+listHarryPotter();
+// filtro le serie televisive
+listSeriesHarryPotter();
+
+console.log("Fine esecuzione...");
+*/
+
 import {BASE_URL} from "./config.js";
 
 export const apilist = (s, type) => {
