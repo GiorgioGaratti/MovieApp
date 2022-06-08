@@ -1,6 +1,6 @@
-.image{
+/* .image{
     position: relative;
-    background: green; /* IE */
+    background: green;
 }
 .image h1{
     z-index: 2;
@@ -13,10 +13,10 @@
     height: 26px;
     padding: 0;
     margin: 0;
-    margin-top: -13px; /* 1/2 height */
+    margin-top: -13px;
     text-align: center;
     background: red;
-    background: rgba(170, 0, 0, 0.8); /* CSS3 */
+    background: rgba(170, 0, 0, 0.8); 
 }
 .image img{
     z-index: 1;
@@ -28,4 +28,28 @@
     bottom:0;
     left:0;
     background:green
+} */
+
+body {
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+#hero {
+    position: relative;
+    max-height: 660px;
+}
+
+#titolo1 {
+    color: white;
+    position: absolute;
+    top: 43%;
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+}
+
+.section_title {
+    text-align: center;
+    padding-top: 15px;
+    color: black;
 }

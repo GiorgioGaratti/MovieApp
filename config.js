@@ -11,3 +11,9 @@ export const CONTENT_TYPE = {
 export const TAG = {
     P: "p"
 };
+
+export const FILM = {
+    HP: "Harry Potter and the Deathly Hallows: Part 2",
+    PIRATES: "Pirates of the Caribbean: Dead Men Tell No Tales",
+    LOR: "The Lord of the Rings: The Return of the King"
+};

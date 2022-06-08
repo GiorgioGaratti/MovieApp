@@ -1,20 +1,27 @@
-// lista titoli "terminator" 
+// harry potter MOVIE
 GET https://www.omdbapi.com/?apikey=d1b45642&t=Harry Potter and the Deathly Hallows: Part 2 HTTP/1.1
 
 ###
 
+// pirates of the carribean MOVIE
+GET https://www.omdbapi.com/?apikey=d1b45642&t=Pirates of the Caribbean: Dead Men Tell No Tales HTTP/1.1
+
+###
+
+// the lord of the rings MOVIE
+GET https://www.omdbapi.com/?apikey=d1b45642&t=The Lord of the Rings: The Return of the King HTTP/1.1
+
+###
+
+
+
 // lista film harry potter con plot lunghi
-GET https://www.omdbapi.com/?apikey=d1b45642&s=harry potter&p=full HTTP/1.1
+GET https://www.omdbapi.com/?apikey=d1b45642&t=Harry Potter and the Sorcerer's Stone&p=short HTTP/1.1
 
 ###
 
 // lista titoli harry potter usciti nel 2000
 GET https://www.omdbapi.com/?apikey=d1b45642&s=harry potter&y=2000 HTTP/1.1
-
-###
-
-// lista pirates of the carribean
-GET https://www.omdbapi.com/?apikey=d1b45642&s=Pirates of the Caribbean&type=movie HTTP/1.1
 
 ###
 
@@ -24,7 +31,7 @@ GET https://www.omdbapi.com/?apikey=d1b45642&s=harry potter&type=series HTTP/1.1
 ###
 
 // lista lord of the rings
-GET https://www.omdbapi.com/?apikey=d1b45642&s=lord of the rings&type=game HTTP/1.1
+GET https://www.omdbapi.com/?apikey=d1b45642&s=lord of the rings&type=movie HTTP/1.1
 
 ###
 
