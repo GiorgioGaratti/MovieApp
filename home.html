@@ -13,7 +13,7 @@
   <script type="module">
     
     import {CONTENT_TYPE, FILM} from "./config.js";
-	import {apilistfilm} from "./api_home.js";
+	  import {apilistfilm} from "./api_home.js";
 
 	// chiamata api per i film
     apilistfilm();
@@ -30,13 +30,13 @@
                     <a class="nav-link active" aria-current="page" href="./home.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#movie">Movie</a>
+                    <a class="nav-link" href="#sez_movie">Movie</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#section_series">Series</a>
+                    <a class="nav-link" href="#sez_series">Series</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#section_game">Game</a>
+                    <a class="nav-link" href="#sez_game">Game</a>
                 </li>
             </ul>
             <form class="d-flex" role="search">
@@ -54,7 +54,7 @@
 		</h1>
     </div>
     </section>
-	<section id="movie">
+	<section id="sez_movie">
     <div class="container-fluid">
         <h2 class="section_title">MOVIE</h2>
         <div class="row row-cols-1 row-cols-md-3 g-4" id="movie_row">
@@ -63,7 +63,7 @@
         </div>
     </div>
 	</section>
-	<section>
+	<section id="sez_series">
     <div class="container-fluid">
         <h2 class="section_title">SERIES</h2>
         <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -101,7 +101,7 @@
         </div>
     </div>
 	</section>
-    <section>
+    <section id="sez_game">
     <div class="container-fluid">
         <h2 class="section_title">GAME</h2>
         <div class="row row-cols-1 row-cols-md-3 g-4">
