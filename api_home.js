@@ -1,4 +1,4 @@
-import { BASE_URL, FILM, ID_SERIES, ID_PLOT, ID_PLOT_SERIES, ID_MOVIE, ID_H5, ID_YEAR, ID_RUN, ID_DIR, ID_PREV, ID_PREV_SER , IDIMG_SERIES,ID_H5_SERIES,ID_YEAR_SERIES,ID_RUN_SERIES, ID_RATE_SERIES, ID_WRITER_SERIES } from "./config.js";
+import { BASE_URL, FILM, ID_SERIES, ID_PLOT_SERIES, ID_MOVIE, ID_H5, ID_YEAR, ID_RUN, ID_DIR, ID_PREV, ID_PREV_SER , IDIMG_SERIES,ID_H5_SERIES,ID_YEAR_SERIES,ID_RUN_SERIES, ID_RATE_SERIES, ID_WRITER_SERIES } from "./config.js";
 import { formattaruntime, formattaruntimeseries } from "./util.js";
 
 export const apifilm = async (titolo) => {
