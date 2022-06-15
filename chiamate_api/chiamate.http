@@ -1,0 +1,46 @@
+// harry potter MOVIE
+GET https://www.omdbapi.com/?apikey=d1b45642&t=Harry Potter and the Deathly Hallows: Part 2 HTTP/1.1
+
+###
+
+// the lord of the rings MOVIE
+GET https://www.omdbapi.com/?apikey=d1b45642&t=The Lord of the Rings: The Return of the King HTTP/1.1
+
+###
+
+// pirates of the carribean MOVIE
+GET https://www.omdbapi.com/?apikey=d1b45642&t=Pirates of the Caribbean: Dead Men Tell No Tales HTTP/1.1
+
+###
+
+//the witcher SERIES
+GET https://www.omdbapi.com/?apikey=d1b45642&i=tt5180504&plot=full HTTP/1.1
+
+###
+// the boys SERIES
+GET https://www.omdbapi.com/?apikey=d1b45642&i=tt1190634&plot=full HTTP/1.1
+
+###
+
+//titans SERIES
+GET https://www.omdbapi.com/?apikey=d1b45642&i=tt1043813&plot=full HTTP/1.1
+
+###
+
+
+//list of harry potter GAME
+GET https://www.omdbapi.com/?apikey=d1b45642&s=harry potter&type=game HTTP/1.1
+
+###
+
+//list of lor GAME
+GET https://www.omdbapi.com/?apikey=d1b45642&s=lord of the rings&type=game HTTP/1.1
+
+###
+
+//list of pirates GAME
+GET https://www.omdbapi.com/?apikey=d1b45642&s=pirates of the caribbean&type=game HTTP/1.1
+
+###
+
+

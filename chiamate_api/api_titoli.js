@@ -1,4 +1,4 @@
-import {BASE_URL, TAG} from "./config.js";
+import {BASE_URL, TAG} from "../config.js";
 
 // chiama, usando la libreria fetch, le api passando il parametro ricerca e il tipo. Le API restituiscono oggetti json
 export const apilist = (s, type) => {

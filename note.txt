@@ -1,0 +1,23 @@
+ {
+      "Title": "The Witcher",
+      "Year": "2019–",
+      "imdbID": "tt5180504",
+      "Type": "series",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BN2FiOWU4YzYtMzZiOS00MzcyLTlkOGEtOTgwZmEwMzAxMzA3XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"
+    },
+
+{
+      "Title": "The Boys",
+      "Year": "2019–",
+      "imdbID": "tt1190634",
+      "Type": "series",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMmM4ZGMyMTQtYmNjYS00ZmQ0LTgwMDUtYmI0YzA5ZGRlYjg5XkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_SX300.jpg"
+    },
+
+{
+      "Title": "Titans",
+      "Year": "2018–",
+      "imdbID": "tt1043813",
+      "Type": "series",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMjA2ZTIxYjktMWUwMi00MDU5LTlmMDYtMTI4ODc1MDY4YzNjXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"
+    },

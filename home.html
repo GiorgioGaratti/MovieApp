@@ -1,144 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MovieApp</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="icon" href="./images/favicon.ico" type="image/x-icon"> 
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MovieApp</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" href="./images/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
-  <script type="module">
-    
-    import {CONTENT_TYPE, FILM} from "./config.js";
-	  import {apilistfilm} from "./api_home.js";
+	<script type="module">
 
-	// chiamata api per i film
-    apilistfilm();
+		import { FILM, ID_SERIES, ID_PREV, ID_PREV_SER } from "./config.js";
+		import { apifilm, apiseries, createmodalfilm, createmodalseries } from "./api_home.js";
 
-  </script>
-    <nav class="navbar navbar-expand-lg sticky-top bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./home.html" title="Homepage">
-                <img src="./images/proiettore.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
-                MovieApp
-            </a>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="./home.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#sez_movie">Movie</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#sez_series">Series</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#sez_game">Game</a>
-                </li>
-            </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button type="button" class="btn btn-secondary">Search</button>
-            </form>
-        </div>
-    </nav>
-	<section id="hero">
-    <div class="container-fluid" style="padding: 0px;">
-		<img src="./images/hero.jpg" class="img-fluid" alt="hero" style="max-width: 100%;">
-        <h1 id="titolo1">
-		The best fantasy content</br>
-        for your entertainment
-		</h1>
-    </div>
-    </section>
-	<section id="sez_movie">
-    <div class="container-fluid">
-        <h2 class="section_title">MOVIE</h2>
-        <div class="row row-cols-1 row-cols-md-3 g-4" id="movie_row">
-			
-        </div>
-        </div>
-    </div>
-	</section>
-	<section id="sez_series">
-    <div class="container-fluid">
-        <h2 class="section_title">SERIES</h2>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-              <div class="card h-100">
-                <img src="./images/placeholder.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Harry Potter</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                       do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img src="./images/placeholder.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">The Lord of the Rings</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img src="./images/placeholder.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Pirates of the Carribean</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-              </div>
-            </div>
-        </div>
-    </div>
-	</section>
-    <section id="sez_game">
-    <div class="container-fluid">
-        <h2 class="section_title">GAME</h2>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-              <div class="card h-100">
-                <img src="./images/placeholder.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Harry Potter</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                       do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img src="./images/placeholder.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">The Lord of the Rings</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img src="./images/placeholder.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Pirates of the Carribean</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-              </div>
-            </div>
-        </div>
-    </div>
-	</section>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+		// chiamata api per harry potter
+		await apifilm(FILM.HP);
+		// chiamata api per lord of the rings
+		await apifilm(FILM.LOR);
+		// chiamata api per pirates of the caribbean
+		await apifilm(FILM.PIRATES);
+
+		// chiamata api per titans
+		await apiseries(ID_SERIES.TITANS);
+		// chiamata api per boys
+		await apiseries(ID_SERIES.BOYS);
+		// chiamata api per the witcher
+		await apiseries(ID_SERIES.WITCHER);
+
+
+		//mi posiziono sui nodi del dom rappresentati dai bottoni blu "preview" dei film
+		const elementbyidhp = document.getElementById(ID_PREV.HP);
+		const elementbyidlor = document.getElementById(ID_PREV.LOR);
+		const elementbyidpir = document.getElementById(ID_PREV.PIRATES);
+		//al click del bottone viene creato il modal
+		elementbyidhp.addEventListener("click", await createmodalfilm(elementbyidhp));
+		elementbyidlor.addEventListener("click", await createmodalfilm(elementbyidlor));
+		elementbyidpir.addEventListener("click", await createmodalfilm(elementbyidpir));
+
+		//mi posiziono sui nodi del dom rappresentati dai bottoni blu "preview" delle serie
+		const elementbyidtitans = document.getElementById(ID_PREV_SER.TITANS);
+		const elementbyidboys = document.getElementById(ID_PREV_SER.BOYS);
+		const elementbyidwitcher = document.getElementById(ID_PREV_SER.WITCHER);
+		//al click del bottone viene creato il modal
+		elementbyidtitans.addEventListener("click", await createmodalseries(elementbyidtitans));
+		elementbyidboys.addEventListener("click", await createmodalseries(elementbyidboys));
+		elementbyidwitcher.addEventListener("click", await createmodalseries(elementbyidwitcher));
+
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+		integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+		integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+		crossorigin="anonymous"></script>
+	<div class="container-fluid">
+		<nav class="navbar navbar-expand-lg bg-light fixed-top d-flex justify-content-between">
+			<ul class="navbar-nav">
+				<li class="nav-item" style="margin-left: 8px;"><a class="navbar-brand" href="./home.html"
+						title="Go to homepage">
+						<img src="./images/proiettore.svg" alt="" width="30" height="24"
+							class="d-inline-block align-text-top">MovieApp</a></li>
+			</ul>
+			<ul class="navbar-nav">
+				<li class="nav-item" style="margin: 0px 10px;"><a href="#tomovie" class="nav-link active"
+						aria-current="item" title="Movie section">Movie</a></li>
+				<li class="nav-item" style="margin: 0px 10px;"><a href="#toseries" class="nav-link active"
+						aria-current="item" title="Series section">Series</a></li>
+				<li class="nav-item" style="margin: 0px 10px;"><a href="#togame" class="nav-link active"
+						aria-current="item" title="Game section">Game</a></li>
+			</ul>
+			<ul class="navbar-nav">
+				<li class="nav-item" style="margin-left: 84px; margin-right: 20px;"><a href="#" class="nav-link active"
+						aria-current="item" title="Go top">Top</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div id="hero">
+		<div class="container-fluid" style="padding: 0px;">
+			<img src="./images/hero.jpg" class="img-fluid" alt="hero" style="max-width: 100%;">
+			<h1 id="titolo1">
+				The best fantasy content</br>
+				for your entertainment
+			</h1>
+			<h2 id="subheading">Enjoy the best fantasy movies and series, chose the best titles from around the
+				world
+			</h2>
+		</div>
+	</div>
+	<div id="sez_movie">
+		<div class="container-fluid">
+			<div class="title_row">
+				<h2 id="tomovie" class="section_title text-bold">MOVIE</h2>
+			</div>
+			<div class="row row-cols-1 row-cols-md-3 g-4">
+				<div class="col justify-content-center">
+					<div class="card card-row no-margin">
+						<img src="./images/placeholder.png" class="card-img-top img-dim" alt="..." id="harry_col">
+						<div class="card-body flex-display">
+							<h5 class="card-title" id="hpcardtit">Harry Potter</h5>
+							<div class="body-p-card">
+								<p class="card-text" id="hpcardyear">Year: 2011</p>
+								<p class="card-text" id="hpcardruntime">Runtime: 132min</p>
+								<p class="card-text" id="hpcarddirector">Director: jhonny</p>
+							</div>
+							<!-- <p class="card-text" id="hpcardplot">Lorem ipsum dolor sit amet, consectetur adipiscing
+								elit, sed
+								do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							 -->
+							<div class="col-md-12 text-center">
+								<a id="hp-preview" data-bs-toggle="modal" href="#modal-film"
+									class="btn btn-primary btn-lg margin-bottom botton-bgcolor">Preview</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col justify-content-center">
+					<div class="card card-row no-margin">
+						<img src="./images/placeholder.png" class="card-img-top img-dim" alt="..." id="lor_col">
+						<div class="card-body flex-display">
+							<h5 class="card-title" id="lorcardtit">The Lord of the Rings</h5>
+							<div class="body-p-card">
+								<p class="card-text" id="lorcardyear">Year: 2011</p>
+								<p class="card-text" id="lorcardruntime">Runtime: 132min</p>
+								<p class="card-text" id="lorcarddirector">Director: jhonny</p>
+							</div>
+							<div class="col-md-12 text-center">
+								<a id="lor-preview" data-bs-toggle="modal" href="#modal-film1"
+									class="btn btn-primary btn-lg margin-bottom botton-bgcolor">Preview</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col justify-content-center">
+					<div class="card card-row no-margin">
+						<img src="./images/placeholder.png" class="card-img-top img-dim" alt="..." id="pirates_col">
+						<div class="card-body flex-display">
+							<h5 class="card-title" id="pircardtit">Pirates of the Carribean</h5>
+							<div class="body-p-card">
+								<p class="card-text" id="pircardyear">Year: 2011</p>
+								<p class="card-text" id="pircardruntime">Runtime: 132min</p>
+								<p class="card-text" id="pircarddirector">Director: jhonny</p>
+							</div>
+							<div class="col-md-12 text-center">
+								<a id="pir-preview" data-bs-toggle="modal" href="#modal-film2"
+									class="btn btn-primary btn-lg margin-bottom botton-bgcolor">Preview</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="sez_series">
+		<div class="container-fluid">
+			<h2 id="toseries" class="section_title text-bold">SERIES</h2>
+			<div class="row row-cols-1 row-cols-md-3 g-4">
+				<div class="col justify-content-center">
+					<div class="card card-row no-margin">
+						<img src="./images/placeholder.png" class="card-img-top img-dim" alt="..." id="titans_col">
+						<div class="card-body flex-display">
+							<h5 class="card-title" id="titanscardtit">TITANS</h5>
+							<div class="body-p-card">
+								<p class="card-text" id="titanscardyear">Year: 2011-</p>
+								<p class="card-text" id="titanscardruntime">Runtime: 132min</p>
+								<p class="card-text" id="titanscardrate">Rating: 8.9/10</p>
+							</div>
+							<div class="col-md-12 text-center">
+								<a id="titans-preview" data-bs-toggle="modal" href="#modal-series1"
+									class="btn btn-primary btn-lg margin-bottom botton-bgcolor">Preview</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col justify-content-center">
+					<div class="card card-row no-margin">
+						<img src="./images/placeholder.png" class="img-dim-boys card-img-top img-dim" alt="..."
+							id="theboys_col">
+						<div class="card-body flex-display">
+							<h5 class="card-title" id="theboyscardtit">THEBOYS</h5>
+							<div class="body-p-card">
+								<p class="card-text" id="theboyscardyear">Year: 2011-</p>
+								<p class="card-text" id="theboyscardruntime">Runtime: 132min</p>
+								<p class="card-text" id="theboyscardrate">Rating: 8.9/10</p>
+							</div>
+							<div class="col-md-12 text-center">
+								<a id="theboys-preview" data-bs-toggle="modal" href="#modal-series2"
+									class="btn btn-primary btn-lg margin-bottom botton-bgcolor">Preview</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col justify-content-center">
+					<div class="card card-row no-margin">
+						<img src="./images/placeholder.png" class="card-img-top img-dim" alt="..." id="thewitcher_col">
+						<div class="card-body flex-display">
+							<h5 class="card-title" id="thewitchercardtit">THE WITCHER</h5>
+							<div class="body-p-card">
+								<p class="card-text" id="thewitchercardyear">Year: 2011-</p>
+								<p class="card-text" id="thewitchercardruntime">Runtime: 132min</p>
+								<p class="card-text" id="thewitchercardrate">Rating: 8.9/10</p>
+							</div>
+							<div class="col-md-12 text-center">
+								<a id="thewitcher-preview" data-bs-toggle="modal" href="#modal-series3"
+									class="btn btn-primary btn-lg margin-bottom botton-bgcolor">Preview</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<footer class="py-3 my-3">
+			<ul class="nav justify-content-center border-bottom pb-3 mb-3">
+				<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+				<li class="nav-item"><a href="https://github.com/GiorgioGaratti/MovieApp/blob/master/README.md"
+						target="_blank" title="About this site" class="nav-link px-2 text-muted">About this</a></li>
+
+				<li class="nav-item border-left-right"><a href="https://www.omdb.org/en/us"
+						class="nav-link px-2 text-muted" target="_blank">Omdb</a></li>
+			</ul>
+			<p class="text-center text-muted">© 2022 MovieApp - by Giorgio Garatti</p>
+		</footer>
+	</footer>
+
+	<!-- modal film -->
+	<div id="modal-film" class="modal fade" role="dialog">
+		<div class=" modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+
+			<!-- contenuto del modal-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title text-modifier-h4 flex-fill" id="title-modal1">Modal Header</h4>
+					<button type="button" class="btn-close btn-mgl5" data-bs-dismiss="modal"
+						style="margin-right: 5px;"></button>
+				</div>
+				<div class="modal-body container-fluid d-flex">
+					<img id="img-modal1" src="./images/placeholder.png" class="img-dim" alt="...">
+					<div class="d-flex text-modal">
+						<p class="plot-text text-bold plot-title">PLOT</p>
+						<p id="plot-modal1" class="plot-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+							sed
+							do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<p id="gen-modal1" class="text-modifier-h4">Adventure, Fantasy, Mystery, ecc...</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	</div>
+
+	<!-- modal film -->
+	<div id="modal-film1" class="modal fade" role="dialog">
+		<div class=" modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+
+			<!-- contenuto del modal-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title text-modifier-h4 flex-fill" id="title-modal2">Modal Header</h4>
+					<button type="button" class="btn-close btn-mgl5" data-bs-dismiss="modal"
+						style="margin-right: 5px;"></button>
+				</div>
+				<div class="modal-body container-fluid d-flex">
+					<img id="img-modal2" src="./images/placeholder.png" class="img-dim" alt="...">
+					<div class="d-flex text-modal">
+						<p class="plot-text text-bold plot-title">PLOT</p>
+						<p id="plot-modal2" class="plot-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+							sed
+							do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<p id="gen-modal2" class="text-modifier-h4">Adventure, Fantasy, Mystery, ecc...</p>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<!-- modal film -->
+	<div id="modal-film2" class="modal fade" role="dialog">
+		<div class=" modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+
+			<!-- contenuto del modal-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title text-modifier-h4 flex-fill" id="title-modal3">Modal Header</h4>
+					<button type="button" class="btn-close btn-mgl5" data-bs-dismiss="modal"
+						style="margin-right: 5px;"></button>
+				</div>
+				<div class="modal-body container-fluid d-flex">
+					<img id="img-modal3" src="./images/placeholder.png" class="img-dim" alt="...">
+					<div class="d-flex text-modal">
+						<p class="plot-text text-bold plot-title">PLOT</p>
+						<p id="plot-modal3" class="plot-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+							sed
+							do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<p id="gen-modal3" class="text-modifier-h4">Adventure, Fantasy, Mystery, ecc...</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- modal series -->
+	<div id="modal-series1" class="modal fade" role="dialog">
+		<div class=" modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+
+			<!-- contenuto del modal-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title text-modifier-h4 flex-fill" id="title-modal4">Modal Header</h4>
+					<button type="button" class="btn-close btn-mgl5" data-bs-dismiss="modal"
+						style="margin-right: 5px;"></button>
+				</div>
+				<div class="modal-body container-fluid d-flex">
+					<img id="img-modal4" src="./images/placeholder.png" class="img-dim" alt="...">
+					<div class="d-flex text-modal">
+						<p class="plot-text text-bold plot-title">PLOT</p>
+						<p id="titansmodplot" class="plot-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+							sed
+							do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<p id="titansmodwrit" class="text-modifier-h4 text-left-corner">Adventure, Fantasy, Mystery, ecc...</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- modal series -->
+	<div id="modal-series2" class="modal fade" role="dialog">
+		<div class=" modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+
+			<!-- contenuto del modal-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title text-modifier-h4 flex-fill" id="title-modal5">Modal Header</h4>
+					<button type="button" class="btn-close btn-mgl5" data-bs-dismiss="modal"
+						style="margin-right: 5px;"></button>
+				</div>
+				<div class="modal-body container-fluid d-flex">
+					<img id="img-modal5" src="./images/placeholder.png" class=" img-dim-boys img-dim" alt="...">
+					<div class="d-flex text-modal">
+						<p class="plot-title plot-text text-bold">PLOT</p>
+						<p id="theboymodplot" class="plot-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+							sed
+							do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<p id="theboymodwrit" class="text-modifier-h4 text-left-corner">Adventure, Fantasy, Mystery, ecc...</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- modal series -->
+	<div id="modal-series3" class="modal fade" role="dialog">
+		<div class=" modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+
+			<!-- contenuto del modal-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title text-modifier-h4 flex-fill" id="title-modal6">Modal Header</h4>
+					<button type="button" class="btn-close btn-mgl5" data-bs-dismiss="modal"
+						style="margin-right: 5px;"></button>
+				</div>
+				<div class="modal-body container-fluid d-flex">
+					<img id="img-modal6" src="./images/placeholder.png" class="img-dim" alt="...">
+					<div class="d-flex text-modal">
+						<p class="plot-title plot-text text-bold">PLOT</p>
+						<p id="witchermodplot" class="plot-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit,
+							sed
+							do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<p id="witchermodwrit" class="text-modifier-h4 text-left-corner">Adventure, Fantasy, Mystery, ecc...</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
 </body>
+
 </html>
